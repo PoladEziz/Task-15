@@ -119,12 +119,11 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        display: none;
+        /* display: none; */
         li {
           list-style-type: none;
           display: flex;
           justify-content: space-between;
-          align-items: center;
           p{
             color: #000;
             font-family: Roboto;
@@ -134,8 +133,7 @@
             line-height: normal;
           }
 .remove-btn{
-  border: none;
-  background: none;
+  bor
 }
         }
       }

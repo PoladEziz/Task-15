@@ -40,10 +40,8 @@ function addList(e) {
 function removeList(element) {
   console.log(element);
   element.parentElement.remove();
-  checkData();
-}
 
-function checkData() {
+  
   if (document.querySelectorAll("li").length <= 0) {
     ul.style.display = "none";
   } else {

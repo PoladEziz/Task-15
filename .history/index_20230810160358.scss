@@ -122,9 +122,6 @@
         display: none;
         li {
           list-style-type: none;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
           p{
             color: #000;
             font-family: Roboto;
@@ -133,10 +130,7 @@
             font-weight: 400;
             line-height: normal;
           }
-.remove-btn{
-  border: none;
-  background: none;
-}
+
         }
       }
     }

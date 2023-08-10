@@ -9,13 +9,16 @@ function addList(e) {
   console.log(input.value);
   if (input.value) {
     errorMsj.style.display = "none";
-    // let li = document.createElement("li");
-    // li.innerText = input.value;
-    // ul.style.display = "flex";
-    // ul.append(li);
+    let li = document.createElement("li");
+    li.innerText = input.value;
     ul.style.display = "flex";
-    ul.innerHTML += `<li>
-<p>${input.value}</p>
+    ul.append(li);
+
+
+
+ul.innerHTML+=`
+<li>
+<p>${}</p>
 <button class="remove-btn">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
         <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#C4C4C4"/>
@@ -24,29 +27,10 @@ function addList(e) {
         </svg>
 </button>
 </li> 
-`;
+`
 
     input.value = "";
   } else {
     errorMsj.style.display = "inline";
-  }
-
-  let allRemoveBtns = document.querySelectorAll(".remove-btn");
-  allRemoveBtns.forEach((element) => {
-    element.addEventListener("click", () => removeList(element));
-  });
-}
-
-function removeList(element) {
-  console.log(element);
-  element.parentElement.remove();
-  checkData();
-}
-
-function checkData() {
-  if (document.querySelectorAll("li").length <= 0) {
-    ul.style.display = "none";
-  } else {
-    ul.style.display = "flex";
   }
 }

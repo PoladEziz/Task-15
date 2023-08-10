@@ -13,7 +13,7 @@ function addList(e) {
     // li.innerText = input.value;
     // ul.style.display = "flex";
     // ul.append(li);
-    ul.style.display = "flex";
+
     ul.innerHTML += `<li>
 <p>${input.value}</p>
 <button class="remove-btn">
@@ -29,24 +29,5 @@ function addList(e) {
     input.value = "";
   } else {
     errorMsj.style.display = "inline";
-  }
-
-  let allRemoveBtns = document.querySelectorAll(".remove-btn");
-  allRemoveBtns.forEach((element) => {
-    element.addEventListener("click", () => removeList(element));
-  });
-}
-
-function removeList(element) {
-  console.log(element);
-  element.parentElement.remove();
-  checkData();
-}
-
-function checkData() {
-  if (document.querySelectorAll("li").length <= 0) {
-    ul.style.display = "none";
-  } else {
-    ul.style.display = "flex";
   }
 }
